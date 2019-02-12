@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Chat Rooms</h3>
+            <div id="chatrooms">
+
+            </div>
+            <br />
+            <a class="button" onclick="addChatroom()">Add New</a>
+        </div>
+        <div class="col-md-6">
+            <h3>Messages</h3>
+            <input id="message" placeholder="write a message..." />
+            <a class="button" onclick="">Post</a>
+            <div id="messageList">
+
+            </div>
+            <br />
+        </div>
+        <div class="col-md-3">
+            <h3>Participants</h3>
+            <div id="participants">
+
+            </div>
+            <br />
+            <a class="button" onclick="addParticipant()" id="addNewParticipant">Add New</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="addChatroom" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add new Chatroom</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="addChatroomForm">
+                    <div class="form-group">
+                        <input class="form-control" type="text"
+                               placeholder="Title" id="cahtroomTitle" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" onclick="postChatroom()" class="btn btn-primary button button4">Add</button>
+                <button type="button" id="cancelChatroom" class="btn btn-primary button button4">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="addParticipant" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add new Participant</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="addParticipantForm">
+                    <div class="form-group">
+                        <select id="users" class="selectpicker" multiple data-live-search="true">
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" onclick="postParticipant()" class="btn btn-primary button button4">Add</button>
+                <button type="button" id="cancelParticipant" class="btn btn-primary button button4">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>  
