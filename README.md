@@ -5,7 +5,7 @@ Back-End developed as a bundle of REST APIs.
 Front-End is based on AJAX technology. 
 SignalR Core 1.4 library was used for instant notification exchange between different clients.
 Application compiled with Swagger, so for testing and review APIs just run application and follow the following link:
-https://localhost:<port number>/swagger/index.html
+https://localhost:port_number/swagger/index.html
 
 At the beginning a few users should be registered, after that they can Log-in to system, create Chatrooms and add other users to Chatrooms.
 User who created the Chatroom is Owner of this Chatroom. Only an Owner can delete Chatroom and add participants.
